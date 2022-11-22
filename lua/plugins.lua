@@ -18,10 +18,7 @@ return require('packer').startup(function(use)
 
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = function()
-      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-      ts_update()
-    end,
+    run = ':TSUpdate'
   }
 
   use 'onsails/lspkind.nvim'
@@ -37,7 +34,7 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
 
   use {
-  	'windwp/nvim-autopairs',
+    'windwp/nvim-autopairs',
     config = function() require("nvim-autopairs").setup {} end
   }
   use 'windwp/nvim-ts-autotag'
