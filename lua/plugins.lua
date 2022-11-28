@@ -52,4 +52,14 @@ return require('packer').startup(function(use)
       require('gitsigns').setup()
     end
   }
+
+  use 'jose-elias-alvarez/null-ls.nvim'
+
+  use {
+    "ThePrimeagen/refactoring.nvim",
+    requires = {
+      { "nvim-lua/plenary.nvim" },
+      { "nvim-treesitter/nvim-treesitter" }
+    }
+  }
 end)

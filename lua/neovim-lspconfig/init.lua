@@ -82,3 +82,9 @@ require('lspconfig')['rust_analyzer'].setup {
     }
   }
 }
+
+require('lspconfig')['tsserver'].setup {
+  on_attach = on_attach,
+}
+
+require('lspconfig')['gopls'].setup {}
